@@ -87,6 +87,10 @@ Route::group(['middleware' => 'auth'], function() {
 	Route::get('items', 'ItemsController@index')->name('items.index');
 	Route::post('items', 'ItemsController@store')->name('items.store');
 	Route::post('items/delete/{id}', 'ItemsController@deleteItem')->name('items.delete');
+	
+	Route::get('deals', 'DealsController@index')->name('deals.index');
+	Route::post('deals', 'DealsController@store')->name('deals.store');
+	Route::post('deals/delete/{id}', 'DealsController@deleteDeal')->name('deals.delete');
 
 	Route::get('configure/items/categories', 'ConfigureController@addCategory')->name('configure.categories.add');
 	Route::post('configure/items/categories', 'ConfigureController@storeCategory')->name('configure.categories.store');
