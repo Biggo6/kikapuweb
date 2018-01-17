@@ -5,6 +5,7 @@ use App\Systemsetting;
 Route::group(['prefix'=>'api/v1'], function(){
 	Route::get('/getItems/{item}', 'ItemsController@getItems');
 	Route::get('/getAllItems', 'ItemsController@getAllItems');
+	Route::post('locations', 'LocationController@store');
 });
 
 

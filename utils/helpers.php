@@ -19,6 +19,14 @@ function activeRoute($route)
     }
 }
 
+function get($a1, $a2){
+	return \Route::get($a1, $a2);
+}
+
+function post($a1, $a2){
+	return \Route::post($a1, $a2);
+}
+
 function canUserAccess($pid){
 	$check = App\Rolepermission::where('permission_id', $pid)->where('role_id', auth()->user()->role)->count();
 	if($check){
